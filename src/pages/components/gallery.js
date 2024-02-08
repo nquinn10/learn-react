@@ -1,5 +1,5 @@
 import Profile from './profile.js'
-
+// create Gallery component - returns custom tag Profile that was just created
 export default function Gallery() {
   return (
     <div>
