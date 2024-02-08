@@ -10,13 +10,14 @@ import Bios from './qcomps/bios'
 import TodoList from "@/pages/qcomps/todos";
 import Gallery from './qcomps/gallery_props'
 import Square from './components/square'
+import Item from './qcomps/props_item'
 // capital letter indicates custom made component
 // When importing component - need capital first letter
 
 export default function Home() { // main component is Home
   return (
     <div className={styles.main}>
-        <Square />
+        <Item />
     </div>
   )
 }
