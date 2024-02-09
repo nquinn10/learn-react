@@ -17,7 +17,7 @@ import Item from './qcomps/props_item'
 export default function Home() { // main component is Home
   return (
     <div className={styles.main}>
-        <Item />
+        <Gallery />
     </div>
   )
 }
