@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 export default function FeedbackForm() {
   const [isSent, setIsSent] = useState(false);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(''); // can use const since not updating variable - only updated
+  // uses update function change state
   if (isSent) {
     return <h1>Thank you!</h1>;
   } else {
