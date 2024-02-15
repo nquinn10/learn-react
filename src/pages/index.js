@@ -7,12 +7,15 @@ import People from './qcomps/list_keys_id'
 import Recipes from './qcomps/recipes'
 //import Gallery from './components/whyState'
 // import Gallery from './components/state'
-import Gallery from './qcomps/state'
+//import Gallery from './qcomps/state'
+//import PersonData from './components/stateObj'
+import Form from './qcomps/stuckForm'
+//import FeedbackForm from './qcomps/thankYouCrash'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Gallery />
+        <Form />
     </div>
   )
 }
