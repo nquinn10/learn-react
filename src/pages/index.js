@@ -13,12 +13,13 @@ import Recipes from './qcomps/recipes'
 //import FeedbackForm from './qcomps/thankYouCrash'
 //import Counter from './components/snapshot'
 //import Form from './components/snapshot2'
-import Counter from './components/queueUpdates'
+//import Counter from './components/queueUpdates'
+import RequestTracker from './qcomps/shoppingCart'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Counter />
+        <RequestTracker />
     </div>
   )
 }
