@@ -9,13 +9,13 @@ import Recipes from './qcomps/recipes'
 // import Gallery from './components/state'
 //import Gallery from './qcomps/state'
 //import PersonData from './components/stateObj'
-import Form from './qcomps/stuckForm'
-//import FeedbackForm from './qcomps/thankYouCrash'
+//import Form from './qcomps/stuckForm'
+import FeedbackForm from './qcomps/thankYouCrash'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Form />
+        <FeedbackForm />
     </div>
   )
 }
