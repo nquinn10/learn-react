@@ -2,11 +2,17 @@ import { useState } from 'react';
 import { sculptureList } from '../../data/data.js';
 
 export default function Gallery() {
+    // must define state in beginning of component - updates on specific user interactions
   const [index, setIndex] = useState(0);
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(false); // state variables can be booleans or objects
+    // need an updater = setShowMore
 
   function handleNextClick() {
-    setIndex(index + 1);
+      if (index < sculptureList.length - 1) {
+          setIndex(index + 1);
+      } else {
+          setIndex(0);
+      }
   }
 
   function handleMoreClick() {
@@ -36,4 +42,4 @@ export default function Gallery() {
       />
     </>
   );
-}
+} // if show more id true - show state variables
