@@ -4,12 +4,12 @@ export default function Form() {
   const [to, setTo] = useState('Alice');
   const [message, setMessage] = useState('Hello');
 
-  function handleSubmit(e) {
+  function handleSubmit(e) { // send alert after 5 seconds
     e.preventDefault();
     setTimeout(() => {
       alert(`You said ${message} to ${to}`);
     }, 5000);
-  }
+  } // if update message to be sent before 5 seconds, will display inital value since it took a snapshot once hit submit
 
   return (
     <form onSubmit={handleSubmit}>

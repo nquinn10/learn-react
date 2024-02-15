@@ -11,12 +11,13 @@ import Recipes from './qcomps/recipes'
 //import PersonData from './components/stateObj'
 //import Form from './qcomps/stuckForm'
 //import FeedbackForm from './qcomps/thankYouCrash'
-import Counter from './components/snapshot'
+//import Counter from './components/snapshot'
+import Form from './components/snapshot2'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Counter />
+        <Form />
     </div>
   )
 }
