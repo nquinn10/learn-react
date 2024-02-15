@@ -14,3 +14,6 @@ export default function Counter() {
     </>
   )
 }
+// if we want to increment by 3 - want to use arrow function instead of number
+// when arrow func is called, will queue up updater function s
+// pass arrow function to updater function - signal to react - dont change val of state now, but put func in queue

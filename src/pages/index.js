@@ -12,12 +12,13 @@ import Recipes from './qcomps/recipes'
 //import Form from './qcomps/stuckForm'
 //import FeedbackForm from './qcomps/thankYouCrash'
 //import Counter from './components/snapshot'
-import Form from './components/snapshot2'
+//import Form from './components/snapshot2'
+import Counter from './components/queueUpdates'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Form />
+        <Counter />
     </div>
   )
 }
