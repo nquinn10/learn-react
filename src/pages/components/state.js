@@ -7,7 +7,7 @@ export default function Gallery() {
     // component has JSX elements and associated state
 
   function handleClick() {
-      if (index <= sculptureList.length - 1) {
+      if (index < sculptureList.length - 1) {
           setIndex(index + 1);
       } else {
           setIndex(0);
