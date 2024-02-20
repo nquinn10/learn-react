@@ -4,11 +4,12 @@
 import styles from '@/styles/Home.module.css'
 //import Profile from './components/profile'
 import ShoppingCart from './qcomps/shoppingCart'
+import Scoreboard from './qcomps/updObjectsForm'
 
 export default function Home() {
     return (
         <div className={styles.main}>
-            <ShoppingCart />
+            <Scoreboard />
         </div>
     )
 }

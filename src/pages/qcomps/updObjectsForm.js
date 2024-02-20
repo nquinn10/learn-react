@@ -8,7 +8,10 @@ export default function Scoreboard() {
   });
 
   function handlePlusClick() {
-    player.likescore++;
+    setPlayer({
+      ...player, // make a copy and only change the thing that needs to be changed
+      likescore: player.likescore + 1
+    });
   }
 
   function handleFirstNameChange(e) {
@@ -20,6 +23,7 @@ export default function Scoreboard() {
 
   function handleLastNameChange(e) {
     setPlayer({
+      ...player, // need to add to copy all properties from og
       lastName: e.target.value
     });
   }
