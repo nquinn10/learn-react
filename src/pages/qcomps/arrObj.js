@@ -7,20 +7,31 @@ const initialList = [
   { id: 2, title: 'Terracotta Army', seen: true },
 ];
 
+function deepCopy(list) { // CREATING A NEW OBJECT
+    return list.map((item) => ({...item}));
+}
+
 export default function BucketList() {
-  const [myList, setMyList] = useState(initialList);
+  const [myList, setMyList] = useState(deepCopy(initialList));
   const [yourList, setYourList] = useState(
-    initialList
+    deepCopy(initialList) // shallow copy
   );
 
+
+  // when copy and array and that array has references - refs are preserved in the copy
+    // copy and original will point to same object - so if change 1, will change the other
+    //both original and copy point to the same thing
+    // to decouple - need to create a deep copy
+    // use map to create copy and use spread to
+
   function handleToggleMyList(artworkId, nextSeen) {
-    const tmpList = myList.map(e => {
+    const tmpList = myList.map(e => { // map returns a copy
         if (e.id === artworkId) {
             e.seen = nextSeen
         }
         return e
     });
-    setMyList(tmpList);
+    setMyList(tmpList); // create and update copy
   }
 
   function handleToggleYourList(artworkId, nextSeen) {
