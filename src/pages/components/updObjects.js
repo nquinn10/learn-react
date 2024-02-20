@@ -10,14 +10,16 @@ export default function Form() {
     }
   });
 
-  function handleCityChange(e) {
-    const nextArtwork = { ...person.artwork, city: e.target.value };
-    const nextPerson = { ...person, artwork: nextArtwork };
+  // city need to change, but original object needs to stay read only
+    // create shallow copy and update elements within shallow copy
+  function handleCityChange(e) { //make sure original object stays same  - read only
+    const nextArtwork = { ...person.artwork, city: e.target.value }; // spread syntax creates shallow copy
+    const nextPerson = { ...person, artwork: nextArtwork }; // use spread syntax to make copy of change
     setPerson(nextPerson);
   }
 
 
-  return (
+  return ( // when city changes, calls handleCityChange function
     <>
       <img src={person.artwork.image}/>
       <label>
