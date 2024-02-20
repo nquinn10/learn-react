@@ -14,13 +14,13 @@ export default function List() {
         onChange={e => setName(e.target.value)}
       />
       <button onClick={() => {
-        setArtists([
+        setArtists([ // ensured updater function does not cause side effects
             ...artists,
             {id: nextId++, name: name}
         ]);
       }}>Add</button>
       <ul>
-        {artists.map(artist => (
+        {artists.map(artist => ( // use map to construct list
           <li key={artist.id}>{artist.name}</li>
         ))}
       </ul>
