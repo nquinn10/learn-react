@@ -11,6 +11,12 @@ export default function List() {
     initialArtists
   );
 
+  function handleDeleteClick(id) { // filters based on ids that are not equal to the one being delete and returns new copied array
+      setArtists(artists.filter((artist) => {
+                                    return artist.id != id;
+      }));
+  }
+
   return (
     <>
       <h1>Inspiring sculptors:</h1>
@@ -18,8 +24,8 @@ export default function List() {
         {artists.map(artist => (
           <li key={artist.id}>
             {artist.name}{' '}
-            <button onClick={() => {
-              artists.splice(artist.id, 1)
+            <button onClick={() => { // usr filter to delete from array
+                handleDeleteClick(artist.id);
             }}>
               Delete
             </button>
